@@ -15,6 +15,14 @@
 		8463336425261C0C00652724 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8463336325261C0C00652724 /* Assets.xcassets */; };
 		8463336725261C0D00652724 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8463336525261C0D00652724 /* LaunchScreen.storyboard */; };
 		8463337225261C0D00652724 /* MyTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463337125261C0D00652724 /* MyTaskTests.swift */; };
+		8463338025261F6D00652724 /* NetWorkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463337F25261F6D00652724 /* NetWorkService.swift */; };
+		84633383252620E300652724 /* EndPointApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84633382252620E300652724 /* EndPointApi.swift */; };
+		846333852526215000652724 /* NetWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333842526215000652724 /* NetWorkModel.swift */; };
+		846333892526243D00652724 /* PrintMsgLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333882526243D00652724 /* PrintMsgLog.swift */; };
+		8463338B252625A600652724 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463338A252625A600652724 /* Response.swift */; };
+		8463338E2526279A00652724 /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463338D2526279A00652724 /* ServiceModel.swift */; };
+		846333902526294500652724 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463338F2526294500652724 /* Constants.swift */; };
+		8463339325262ABD00652724 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463339225262ABD00652724 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,14 @@
 		8463336D25261C0D00652724 /* MyTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463337125261C0D00652724 /* MyTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskTests.swift; sourceTree = "<group>"; };
 		8463337325261C0D00652724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8463337F25261F6D00652724 /* NetWorkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkService.swift; sourceTree = "<group>"; };
+		84633382252620E300652724 /* EndPointApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointApi.swift; sourceTree = "<group>"; };
+		846333842526215000652724 /* NetWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkModel.swift; sourceTree = "<group>"; };
+		846333882526243D00652724 /* PrintMsgLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintMsgLog.swift; sourceTree = "<group>"; };
+		8463338A252625A600652724 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		8463338D2526279A00652724 /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
+		8463338F2526294500652724 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8463339225262ABD00652724 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +97,14 @@
 		8463335625261C0700652724 /* MyTask */ = {
 			isa = PBXGroup;
 			children = (
-				8463335725261C0700652724 /* AppDelegate.swift */,
-				8463335925261C0700652724 /* SceneDelegate.swift */,
+				8463339125262A8800652724 /* CoreDataLayer */,
+				846333872526240200652724 /* Common */,
+				84633386252623F400652724 /* utilityLayer */,
+				8463337C25261DFE00652724 /* NetWorkLayer */,
 				8463335B25261C0700652724 /* ViewController.swift */,
+				8463339425262C4400652724 /* MainDelegate */,
+				8463339525262C9B00652724 /* Controller */,
+				8463339625262CA900652724 /* viewModel */,
 				8463335D25261C0700652724 /* Main.storyboard */,
 				8463336325261C0C00652724 /* Assets.xcassets */,
 				8463336525261C0D00652724 /* LaunchScreen.storyboard */,
@@ -100,6 +121,81 @@
 				8463337325261C0D00652724 /* Info.plist */,
 			);
 			path = MyTaskTests;
+			sourceTree = "<group>";
+		};
+		8463337C25261DFE00652724 /* NetWorkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8463338C2526277B00652724 /* Service Model */,
+				84633381252620A000652724 /* NetWorkModel */,
+				8463337F25261F6D00652724 /* NetWorkService.swift */,
+			);
+			path = NetWorkLayer;
+			sourceTree = "<group>";
+		};
+		84633381252620A000652724 /* NetWorkModel */ = {
+			isa = PBXGroup;
+			children = (
+				84633382252620E300652724 /* EndPointApi.swift */,
+				846333842526215000652724 /* NetWorkModel.swift */,
+				8463338A252625A600652724 /* Response.swift */,
+			);
+			path = NetWorkModel;
+			sourceTree = "<group>";
+		};
+		84633386252623F400652724 /* utilityLayer */ = {
+			isa = PBXGroup;
+			children = (
+				846333882526243D00652724 /* PrintMsgLog.swift */,
+			);
+			path = utilityLayer;
+			sourceTree = "<group>";
+		};
+		846333872526240200652724 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8463338F2526294500652724 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8463338C2526277B00652724 /* Service Model */ = {
+			isa = PBXGroup;
+			children = (
+				8463338D2526279A00652724 /* ServiceModel.swift */,
+			);
+			path = "Service Model";
+			sourceTree = "<group>";
+		};
+		8463339125262A8800652724 /* CoreDataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8463339225262ABD00652724 /* CoreDataManager.swift */,
+			);
+			path = CoreDataLayer;
+			sourceTree = "<group>";
+		};
+		8463339425262C4400652724 /* MainDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8463335725261C0700652724 /* AppDelegate.swift */,
+				8463335925261C0700652724 /* SceneDelegate.swift */,
+			);
+			path = MainDelegate;
+			sourceTree = "<group>";
+		};
+		8463339525262C9B00652724 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8463339625262CA900652724 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,8 +300,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8463336225261C0700652724 /* MyTask.xcdatamodeld in Sources */,
+				846333902526294500652724 /* Constants.swift in Sources */,
+				84633383252620E300652724 /* EndPointApi.swift in Sources */,
+				846333892526243D00652724 /* PrintMsgLog.swift in Sources */,
 				8463335C25261C0700652724 /* ViewController.swift in Sources */,
+				8463338B252625A600652724 /* Response.swift in Sources */,
+				8463339325262ABD00652724 /* CoreDataManager.swift in Sources */,
+				8463338E2526279A00652724 /* ServiceModel.swift in Sources */,
 				8463335825261C0700652724 /* AppDelegate.swift in Sources */,
+				846333852526215000652724 /* NetWorkModel.swift in Sources */,
+				8463338025261F6D00652724 /* NetWorkService.swift in Sources */,
 				8463335A25261C0700652724 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
