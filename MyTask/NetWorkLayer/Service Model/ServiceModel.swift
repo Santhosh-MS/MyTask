@@ -25,3 +25,4 @@ class Datum: Codable {
         self.text = text
     }
 }
+

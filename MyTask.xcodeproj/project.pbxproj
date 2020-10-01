@@ -23,6 +23,9 @@
 		8463338E2526279A00652724 /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463338D2526279A00652724 /* ServiceModel.swift */; };
 		846333902526294500652724 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463338F2526294500652724 /* Constants.swift */; };
 		8463339325262ABD00652724 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463339225262ABD00652724 /* CoreDataManager.swift */; };
+		8463339825262E3C00652724 /* ViewModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463339725262E3C00652724 /* ViewModelVC.swift */; };
+		8463339F252651FD00652724 /* SwiperData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463339E252651FD00652724 /* SwiperData+CoreDataClass.swift */; };
+		846333A12526523000652724 /* SwiperData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333A02526523000652724 /* SwiperData+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		8463338D2526279A00652724 /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
 		8463338F2526294500652724 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8463339225262ABD00652724 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8463339725262E3C00652724 /* ViewModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelVC.swift; sourceTree = "<group>"; };
+		8463339E252651FD00652724 /* SwiperData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiperData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		846333A02526523000652724 /* SwiperData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiperData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,6 @@
 				846333872526240200652724 /* Common */,
 				84633386252623F400652724 /* utilityLayer */,
 				8463337C25261DFE00652724 /* NetWorkLayer */,
-				8463335B25261C0700652724 /* ViewController.swift */,
 				8463339425262C4400652724 /* MainDelegate */,
 				8463339525262C9B00652724 /* Controller */,
 				8463339625262CA900652724 /* viewModel */,
@@ -170,6 +175,7 @@
 		8463339125262A8800652724 /* CoreDataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8463339D252651D500652724 /* CoreModel */,
 				8463339225262ABD00652724 /* CoreDataManager.swift */,
 			);
 			path = CoreDataLayer;
@@ -187,6 +193,7 @@
 		8463339525262C9B00652724 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8463335B25261C0700652724 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,8 +201,18 @@
 		8463339625262CA900652724 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8463339725262E3C00652724 /* ViewModelVC.swift */,
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		8463339D252651D500652724 /* CoreModel */ = {
+			isa = PBXGroup;
+			children = (
+				8463339E252651FD00652724 /* SwiperData+CoreDataClass.swift */,
+				846333A02526523000652724 /* SwiperData+CoreDataProperties.swift */,
+			);
+			path = CoreModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +317,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8463336225261C0700652724 /* MyTask.xcdatamodeld in Sources */,
+				8463339F252651FD00652724 /* SwiperData+CoreDataClass.swift in Sources */,
+				846333A12526523000652724 /* SwiperData+CoreDataProperties.swift in Sources */,
+				8463339825262E3C00652724 /* ViewModelVC.swift in Sources */,
 				846333902526294500652724 /* Constants.swift in Sources */,
 				84633383252620E300652724 /* EndPointApi.swift in Sources */,
 				846333892526243D00652724 /* PrintMsgLog.swift in Sources */,
