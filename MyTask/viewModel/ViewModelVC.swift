@@ -55,9 +55,16 @@ extension ViewModelVC {
                 swiperDB.text = swiper.text
             }
             try CoreDataManager.shared.manageObjectContext.save()
+            
+            let SwiperFetchInfo = fetchMoviewsList()
+            if SwiperFetchInfo.count > 0 {
+                self.viewModelDelegate?.getSwiperData(dataSwiper: SwiperFetchInfo)
+            }
         }catch let err as NSError{
             PrintMsgLog.Console(msg: err.localizedDescription)
         }
+        
+        
     }
     
     

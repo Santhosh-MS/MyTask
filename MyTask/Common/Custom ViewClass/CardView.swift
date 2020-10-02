@@ -14,16 +14,14 @@ class CardView: UIView {
     override func layoutSubviews() {
         superview?.layoutSubviews()
      
-        clipsToBounds = true
         backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         layer.cornerRadius = 5.0
-        layer.borderColor  =  UIColor.clear.cgColor
-        layer.borderWidth = 2.0
-        layer.shadowOpacity = 0.5
-        layer.shadowColor =  UIColor.lightGray.cgColor
-        layer.shadowRadius = 5.0
-        layer.shadowOffset = CGSize(width:5, height: 5)
-        layer.masksToBounds = true
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 1
+        layer.shadowOffset = .zero
+        layer.shadowRadius = 5
+        clipsToBounds = false
         
     }
     /*
