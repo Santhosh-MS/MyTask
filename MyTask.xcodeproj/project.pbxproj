@@ -26,6 +26,10 @@
 		8463339825262E3C00652724 /* ViewModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463339725262E3C00652724 /* ViewModelVC.swift */; };
 		8463339F252651FD00652724 /* SwiperData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463339E252651FD00652724 /* SwiperData+CoreDataClass.swift */; };
 		846333A12526523000652724 /* SwiperData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333A02526523000652724 /* SwiperData+CoreDataProperties.swift */; };
+		846333A62526AEB900652724 /* SwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333A42526AEB900652724 /* SwiperCollectionViewCell.swift */; };
+		846333A72526AEB900652724 /* SwiperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846333A52526AEB900652724 /* SwiperCollectionViewCell.xib */; };
+		846333AA2526BC7400652724 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333A92526BC7400652724 /* CardView.swift */; };
+		846333AC2526C0D700652724 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333AB2526C0D700652724 /* CircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		8463339725262E3C00652724 /* ViewModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelVC.swift; sourceTree = "<group>"; };
 		8463339E252651FD00652724 /* SwiperData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiperData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		846333A02526523000652724 /* SwiperData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiperData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		846333A42526AEB900652724 /* SwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiperCollectionViewCell.swift; sourceTree = "<group>"; };
+		846333A52526AEB900652724 /* SwiperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiperCollectionViewCell.xib; sourceTree = "<group>"; };
+		846333A92526BC7400652724 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		846333AB2526C0D700652724 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +167,7 @@
 		846333872526240200652724 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				846333A82526BC4500652724 /* Custom ViewClass */,
 				8463338F2526294500652724 /* Constants.swift */,
 			);
 			path = Common;
@@ -193,6 +202,8 @@
 		8463339525262C9B00652724 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				846333A32526AE4500652724 /* CollectionCell */,
+				846333A22526AE3400652724 /* TableCEll */,
 				8463335B25261C0700652724 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -213,6 +224,31 @@
 				846333A02526523000652724 /* SwiperData+CoreDataProperties.swift */,
 			);
 			path = CoreModel;
+			sourceTree = "<group>";
+		};
+		846333A22526AE3400652724 /* TableCEll */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableCEll;
+			sourceTree = "<group>";
+		};
+		846333A32526AE4500652724 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				846333A42526AEB900652724 /* SwiperCollectionViewCell.swift */,
+				846333A52526AEB900652724 /* SwiperCollectionViewCell.xib */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		846333A82526BC4500652724 /* Custom ViewClass */ = {
+			isa = PBXGroup;
+			children = (
+				846333A92526BC7400652724 /* CardView.swift */,
+				846333AB2526C0D700652724 /* CircleButton.swift */,
+			);
+			path = "Custom ViewClass";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +334,7 @@
 			files = (
 				8463336725261C0D00652724 /* LaunchScreen.storyboard in Resources */,
 				8463336425261C0C00652724 /* Assets.xcassets in Resources */,
+				846333A72526AEB900652724 /* SwiperCollectionViewCell.xib in Resources */,
 				8463335F25261C0700652724 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +356,7 @@
 				8463336225261C0700652724 /* MyTask.xcdatamodeld in Sources */,
 				8463339F252651FD00652724 /* SwiperData+CoreDataClass.swift in Sources */,
 				846333A12526523000652724 /* SwiperData+CoreDataProperties.swift in Sources */,
+				846333AC2526C0D700652724 /* CircleButton.swift in Sources */,
 				8463339825262E3C00652724 /* ViewModelVC.swift in Sources */,
 				846333902526294500652724 /* Constants.swift in Sources */,
 				84633383252620E300652724 /* EndPointApi.swift in Sources */,
@@ -326,10 +364,12 @@
 				8463335C25261C0700652724 /* ViewController.swift in Sources */,
 				8463338B252625A600652724 /* Response.swift in Sources */,
 				8463339325262ABD00652724 /* CoreDataManager.swift in Sources */,
+				846333A62526AEB900652724 /* SwiperCollectionViewCell.swift in Sources */,
 				8463338E2526279A00652724 /* ServiceModel.swift in Sources */,
 				8463335825261C0700652724 /* AppDelegate.swift in Sources */,
 				846333852526215000652724 /* NetWorkModel.swift in Sources */,
 				8463338025261F6D00652724 /* NetWorkService.swift in Sources */,
+				846333AA2526BC7400652724 /* CardView.swift in Sources */,
 				8463335A25261C0700652724 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
