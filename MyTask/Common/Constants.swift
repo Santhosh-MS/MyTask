@@ -10,5 +10,7 @@ import Foundation
 
 //variable for APPName
 let APP_NAME : String = "MY..Task"
-//variable for BaseULR for Swiper
+//variable BaseULR for Swiper
 let BASE_URL : String = "https://git.io/fjaqJ"
+//variable isOnlineCheck for Swiper
+

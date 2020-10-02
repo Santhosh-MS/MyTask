@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,9 @@
 		846333A72526AEB900652724 /* SwiperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846333A52526AEB900652724 /* SwiperCollectionViewCell.xib */; };
 		846333AA2526BC7400652724 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333A92526BC7400652724 /* CardView.swift */; };
 		846333AC2526C0D700652724 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333AB2526C0D700652724 /* CircleButton.swift */; };
+		846333AF2527093600652724 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333AE2527093600652724 /* BaseViewController.swift */; };
+		846333B82527199F00652724 /* NetworkChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333B72527199F00652724 /* NetworkChecking.swift */; };
+		846333BA25271E0B00652724 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846333B925271E0B00652724 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		846333A52526AEB900652724 /* SwiperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiperCollectionViewCell.xib; sourceTree = "<group>"; };
 		846333A92526BC7400652724 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		846333AB2526C0D700652724 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		846333AE2527093600652724 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		846333B72527199F00652724 /* NetworkChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecking.swift; sourceTree = "<group>"; };
+		846333B925271E0B00652724 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 				8463335625261C0700652724 /* MyTask */,
 				8463337025261C0D00652724 /* MyTaskTests */,
 				8463335525261C0700652724 /* Products */,
+				B4FC5A7C7725D3A898474045 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,8 +174,10 @@
 		846333872526240200652724 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				846333B22527163100652724 /* Extensions */,
 				846333A82526BC4500652724 /* Custom ViewClass */,
 				8463338F2526294500652724 /* Constants.swift */,
+				846333B72527199F00652724 /* NetworkChecking.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -202,6 +211,7 @@
 		8463339525262C9B00652724 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				846333AD252708ED00652724 /* CommonVc */,
 				846333A32526AE4500652724 /* CollectionCell */,
 				846333A22526AE3400652724 /* TableCEll */,
 				8463335B25261C0700652724 /* ViewController.swift */,
@@ -249,6 +259,29 @@
 				846333AB2526C0D700652724 /* CircleButton.swift */,
 			);
 			path = "Custom ViewClass";
+			sourceTree = "<group>";
+		};
+		846333AD252708ED00652724 /* CommonVc */ = {
+			isa = PBXGroup;
+			children = (
+				846333AE2527093600652724 /* BaseViewController.swift */,
+			);
+			path = CommonVc;
+			sourceTree = "<group>";
+		};
+		846333B22527163100652724 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				846333B925271E0B00652724 /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B4FC5A7C7725D3A898474045 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,9 +390,12 @@
 				8463339F252651FD00652724 /* SwiperData+CoreDataClass.swift in Sources */,
 				846333A12526523000652724 /* SwiperData+CoreDataProperties.swift in Sources */,
 				846333AC2526C0D700652724 /* CircleButton.swift in Sources */,
+				846333AF2527093600652724 /* BaseViewController.swift in Sources */,
 				8463339825262E3C00652724 /* ViewModelVC.swift in Sources */,
+				846333B82527199F00652724 /* NetworkChecking.swift in Sources */,
 				846333902526294500652724 /* Constants.swift in Sources */,
 				84633383252620E300652724 /* EndPointApi.swift in Sources */,
+				846333BA25271E0B00652724 /* Extension.swift in Sources */,
 				846333892526243D00652724 /* PrintMsgLog.swift in Sources */,
 				8463335C25261C0700652724 /* ViewController.swift in Sources */,
 				8463338B252625A600652724 /* Response.swift in Sources */,

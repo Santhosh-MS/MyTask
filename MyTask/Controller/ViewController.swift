@@ -8,8 +8,10 @@
 
 import UIKit
 
+
 //MARK:- ViewController Class for SWiperViews
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
+    
     
     //MARK:- StoryBoard Outlet Reference
     @IBOutlet weak var collectionView: UICollectionView!
@@ -18,28 +20,42 @@ class ViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var countLbl: UILabel!
     
-//MARK:- Class leval Instances
+    //MARK:- Class leval Instances
     let viewModel  = ViewModelVC()
     var swiperList : [SwiperData] = []
-
     
-//MARK:- VC viewDidLoad Method
+    //MARK:- VC viewDidLoad Method
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.SetUpView()
+        //ViewMolde setup
+        self.viewModel.viewModelDelegate = self
+        
+        
+        if viewModel.fetchMoviewsList().count > 0 {
+            DispatchQueue.main.async {
+                self.showLoadingIndicator()
+            }
+            self.viewModel.getSwiperListInfo()
+            self.SetUpView()
+        }else{
+            if Reachability.shared.isConnectedToNetwork(){
+                DispatchQueue.main.async {
+                   self.showLoadingIndicator()
+               }
+                self.viewModel.getSwiperListInfo()
+                self.SetUpView()
+            }else{
+                self.showOKAlert(titles: APP_NAME, msg: "Kindly Check Your NetWork Connection ")
+            }
+        }
     }
+
     
 //MARK:- func for setupviewCtrl
     func SetUpView() {
         
         //View setup
         self.view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        
-        //ViewMolde setup
-        self.viewModel.viewModelDelegate = self
-        self.viewModel.getSwiperListInfo()
-        
         //collectionView setup
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -84,7 +100,7 @@ class ViewController: UIViewController {
         
     }
     
-//MARK:- func for setupviewCtrl
+    //MARK:- func for setupviewCtrl
     @objc func actionHandleNextPage(button: UIButton) {
         var indexPath: IndexPath!
         var current = pageControl.currentPage
@@ -100,23 +116,23 @@ class ViewController: UIViewController {
                 return
             }
         }
-       
+        
         DispatchQueue.main.async {
-             indexPath = IndexPath(item: current, section: 0)
+            indexPath = IndexPath(item: current, section: 0)
             self.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
         }
     }
     
     
-//MARK:- func for RefershSwiper
+    //MARK:- func for RefershSwiper
     @IBAction func actionRefresh(_ sender: Any) {
         if swiperList.count > 0 {
             DispatchQueue.main.async {
-            self.pageControl.currentPage = 0
+                self.pageControl.currentPage = 0
                 self.countLbl.text = "\(self.pageControl.currentPage+1) / \(self.swiperList.count)"
                 self.pageControl.numberOfPages = self.swiperList.count
                 DispatchQueue.main.async {
-                   let indexPath = IndexPath(item: 0, section: 0)
+                    let indexPath = IndexPath(item: 0, section: 0)
                     self.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
                 }
                 self.collectionView.reloadData()
@@ -156,7 +172,7 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource,U
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollPos = scrollView.contentOffset.x / view.frame.width
         pageControl.currentPage = Int(scrollPos)
-         self.countLbl.text = "\(self.pageControl.currentPage+1) / \(self.swiperList.count)"
+        self.countLbl.text = "\(self.pageControl.currentPage+1) / \(self.swiperList.count)"
         
         for cell in collectionView!.visibleCells as [UICollectionViewCell] {
             if let animatedCell = cell as? SwiperCollectionViewCell {
@@ -174,7 +190,7 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource,U
             }
         }
     }
-
+    
 }
 
 //MARK:- Extension for customeDelegate method to getData
@@ -190,11 +206,12 @@ extension ViewController : SendDataProtocol {
             
         }
     }
-
-//MARK:- Func for reload getDatainfo
+    
+    //MARK:- Func for reload getDatainfo
     func reloadDataInfo() {
         DispatchQueue.main.async {
-        self.pageControl.currentPage = 0
+            self.hideLoadingIndicator()
+            self.pageControl.currentPage = 0
             self.countLbl.text = "\(self.pageControl.currentPage+1) / \(self.swiperList.count)"
             self.pageControl.numberOfPages = self.swiperList.count
             self.collectionView.reloadData()
