@@ -29,8 +29,6 @@ class ViewController: BaseViewController {
         super.viewDidLoad()
         //ViewMolde setup
         self.viewModel.viewModelDelegate = self
-        
-        
         if viewModel.fetchMoviewsList().count > 0 {
             DispatchQueue.main.async {
                 self.showLoadingIndicator()
